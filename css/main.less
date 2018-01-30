@@ -23,18 +23,27 @@ body, html {
   font-weight: 500;
   font-size: 14px;
 
-  header {
-      display: flex;
-  }
-
   .primary {
     p {
       margin: 6px 0px;
     }
   }
 
+  #resume-body {
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 50% 0%;
+    animation: fadein 0.75s ease-in forwards, topdown 0.75s ease-in;
+    animation-delay: 2.25s;
+  }
+
   header {
+    display: flex;
+
     .primary {
+      display: flex;
+      align-items: center;
+
       .name {
         font-size: 48px;
         margin-right: 12px;
@@ -51,12 +60,23 @@ body, html {
         }
       }
 
+      .icons {
+        opacity: 0;
+        visibility: hidden;
+        animation: fadein 0.75s ease-in forwards;
+        animation-delay: 1.5s
+      }
+
       a {
         text-decoration: none;
       }
     }
 
     .secondary {
+      opacity: 0;
+      visibility: hidden;
+      animation: fadein 0.75s ease-in forwards;
+      animation-delay: 2.25s;
       flex: 1 1 auto;
       text-align: right;
 
@@ -116,5 +136,15 @@ body, html {
   to {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@keyframes topdown {
+  from {
+    transform: rotateX(90deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
   }
 }
