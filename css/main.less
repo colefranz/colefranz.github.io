@@ -29,14 +29,6 @@ body, html {
     }
   }
 
-  #resume-body {
-    opacity: 0;
-    visibility: hidden;
-    transform-origin: 50% 0%;
-    animation: fadein 0.75s ease-in forwards, topdown 0.75s ease-in;
-    animation-delay: 2.25s;
-  }
-
   header {
     display: flex;
 
@@ -47,24 +39,6 @@ body, html {
       .name {
         font-size: 48px;
         margin-right: 12px;
-
-        .first {
-          animation: fadein 0.75s ease-in;
-        }
-
-        .last {
-          opacity: 0;
-          visibility: hidden;
-          animation: fadein 0.75s ease-in forwards;
-          animation-delay: 0.75s
-        }
-      }
-
-      .icons {
-        opacity: 0;
-        visibility: hidden;
-        animation: fadein 0.75s ease-in forwards;
-        animation-delay: 1.5s
       }
 
       a {
@@ -73,15 +47,11 @@ body, html {
     }
 
     .secondary {
-      opacity: 0;
-      visibility: hidden;
-      animation: fadein 0.75s ease-in forwards;
-      animation-delay: 2.25s;
       flex: 1 1 auto;
       text-align: right;
 
       p {
-        margin: 6px 0px;
+        margin: 3px 0px;
       }
     }
   }
@@ -94,7 +64,7 @@ body, html {
     }
 
     .primary {
-      width: 29%;
+      width: 26%;
 
       .title {
         font-size: 18px;
@@ -102,7 +72,7 @@ body, html {
     }
 
     .secondary {
-      width: 71%;
+      width: 74%;
     }
   }
 
@@ -124,6 +94,44 @@ body, html {
 
   ul {
       margin: 8px 0px;
+  }
+}
+
+// animations
+
+
+#resume-body {
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: 50% 0%;
+  animation: fadein 0.75s ease-in forwards, topdown 0.75s ease-in;
+  animation-delay: 2.25s;
+}
+
+header {
+  .primary {
+    .first, .last, .icons {
+      animation: fadein 0.75s ease-in forwards;
+    }
+
+    .last {
+      opacity: 0;
+      visibility: hidden;
+      animation-delay: 0.75s
+    }
+
+    .icons {
+      opacity: 0;
+      visibility: hidden;
+      animation-delay: 1.5s
+    }
+  }
+
+  .secondary {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadein 0.75s ease-in forwards;
+    animation-delay: 2.25s;
   }
 }
 
