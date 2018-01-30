@@ -1,54 +1,119 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Scope One', serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.abs0000 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 #main {
   background: black;
   color: #c8c8c8;
   text-align: center;
+}
 
-  .first {
-    animation: fadein-fast 0.75s ease-in;
+#resume {
+  margin: auto;
+  padding: 0px;
+  width: 670px;
+  /* height: 900px; */
+  clear: both;
+  font-weight: 500;
+  font-size: 14px;
+
+  header {
+      display: flex;
   }
 
-  .last {
-    animation: fadein-slow 1.5s ease-in;
+  .primary {
+    p {
+      margin: 6px 0px;
+    }
+  }
+
+  header {
+    .primary {
+      .name {
+        font-size: 48px;
+        margin-right: 12px;
+
+        .first {
+          animation: fadein 0.75s ease-in;
+        }
+
+        .last {
+          opacity: 0;
+          visibility: hidden;
+          animation: fadein 0.75s ease-in forwards;
+          animation-delay: 0.75s
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .secondary {
+      flex: 1 1 auto;
+      text-align: right;
+
+      p {
+        margin: 6px 0px;
+      }
+    }
+  }
+
+  #resume-body > div {
+    border-top: 1px solid transparent;
+
+    &:last-child {
+      border-top: none;
+    }
+
+    .primary {
+      width: 29%;
+
+      .title {
+        font-size: 18px;
+      }
+    }
+
+    .secondary {
+      width: 71%;
+    }
+  }
+
+  .item {
+    display: flex;
+    border-bottom: 1px solid #CCC;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .item-header {
+      font-size: 22px;
+      background: #ccc;
+      margin: 3px 0px;
+      padding: 3px 5px;
+  }
+
+  ul {
+      margin: 8px 0px;
   }
 }
 
-@keyframes fadein-fast {
+@keyframes fadein {
   from {
     opacity: 0;
     visibility: hidden;
   }
 
   to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes fadein-slow {
-  0%, 50% {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  100% {
     opacity: 1;
     visibility: visible;
   }
