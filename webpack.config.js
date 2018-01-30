@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -12,7 +11,7 @@ module.exports = {
   },
   entry: './index.js',
   output: {
-    path: path.join(__dirname, '/docs'),
+    path: path.resolve(__dirname),
     filename: 'main.bundle.js'
   },
   plugins: [
@@ -20,13 +19,7 @@ module.exports = {
       title: 'Cole Franz',
       filename: 'index.html',
       template: 'index.ejs'
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: 'assets/',
-        to: ''
-      }
-    ])
+    })
   ],
   module: {
     rules: [
