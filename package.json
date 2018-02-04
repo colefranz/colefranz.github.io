@@ -22,7 +22,7 @@
   "author": "colefranz <cole.franz@calgaryscientific.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "serve": "webpack-dev-server",
+    "serve:out": "webpack-dev-server --host 0.0.0.0"
   }
 }
