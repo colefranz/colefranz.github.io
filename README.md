@@ -1,6 +1,11 @@
-### Development
-1. `yarn install` to get setup.
+###
 
-2. `npm run watch` to get going.
+Love and hate myself for deciding to make my resume in html and css.
+
+### Development
+
+1. `npm install` to get setup.
+
+2. `npm run serve` to get going.
 
 3. `localhost:3000` to see the good stuff.

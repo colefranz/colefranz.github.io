@@ -1,7 +1,8 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Scope One', serif;
+  font-family: "Scope One", serif;
 }
 
 * {
@@ -64,7 +65,7 @@ body, html {
     }
 
     .primary {
-      width: 26%;
+      width: 28%;
 
       .title {
         font-size: 18px;
@@ -72,13 +73,13 @@ body, html {
     }
 
     .secondary {
-      width: 74%;
+      width: 72%;
     }
   }
 
   .item {
     display: flex;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #ccc;
 
     &:last-child {
       border-bottom: none;
@@ -86,44 +87,55 @@ body, html {
   }
 
   .item-header {
-      font-size: 22px;
-      background: #ccc;
-      margin: 3px 0px;
-      padding: 3px 5px;
+    font-size: 22px;
+    background: #ccc;
+    margin: 3px 0px;
+    padding: 3px 5px;
   }
 
   ul {
-      margin: 8px 0px;
+    padding: 0 20px;
+    margin: 8px 0px;
+  }
+
+  .in-columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 25px;
+    margin: 0;
+    padding: 0 0 0 20px;
   }
 }
 
 // animations
-
 
 #resume-body {
   opacity: 0;
   visibility: hidden;
   transform-origin: 50% 0%;
   animation: fadein 0.75s ease-in forwards, topdown 0.75s ease-in;
-  animation-delay: 2.25s;
+  // animation-delay: 2.25s;
+  animation-delay: 1s;
 }
 
 header {
   .primary {
-    .first, .last, .icons {
+    .first,
+    .last,
+    .icons {
       animation: fadein 0.75s ease-in forwards;
     }
 
     .last {
       opacity: 0;
       visibility: hidden;
-      animation-delay: 0.75s
+      // animation-delay: 0.75s;
     }
 
     .icons {
       opacity: 0;
       visibility: hidden;
-      animation-delay: 1.5s
+      // animation-delay: 1.5s;
     }
   }
 
@@ -131,7 +143,7 @@ header {
     opacity: 0;
     visibility: hidden;
     animation: fadein 0.75s ease-in forwards;
-    animation-delay: 2.25s;
+    // animation-delay: 2.25s;
   }
 }
 
